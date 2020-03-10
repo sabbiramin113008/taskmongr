@@ -1,0 +1,9 @@
+/.idea/
+/__pycache__/
+__pycache__
+__pycache__/
+.virtualenvironment
+.virtualenvironment/
+*.pyc
+/build
+/Uploaders/aws_cred.py
