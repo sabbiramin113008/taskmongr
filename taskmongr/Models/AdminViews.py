@@ -36,6 +36,11 @@ class TaskAdmin(ModelView):
     column_type_formatters = MY_DEFAULT_FORMATTERS
 
     can_view_details = True
+    can_edit = True
+    can_export = True
+    can_set_page_size = True
+    page_size = 50
+    can_create = False
     column_formatters = {
         'execution_status': lambda v, c, m, p: make_execution_status(m.execution_status)
 
@@ -47,3 +52,4 @@ class TaskAdmin(ModelView):
                       'task_id', 'listener', 'executing_time',
                       'func_name', 'com_filename', 'execution_status'
                       ]
+    column_export_exclude_list = ['d_f','d_k','d_a']

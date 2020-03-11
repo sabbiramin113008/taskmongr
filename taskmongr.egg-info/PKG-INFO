@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: taskmongr
+Version: 0.5.0
+Summary: A Simple Task Scheduling and Queueing in Python
+Home-page: UNKNOWN
+Author: S.M. Sabbir Amin
+Author-email: <sabbiramin.cse11ruet@gmail.com>,<sabbir@rokomari.com>
+License: GNU GPL v3 or later
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

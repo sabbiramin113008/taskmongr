@@ -6,4 +6,5 @@ __pycache__/
 .virtualenvironment/
 *.pyc
 /build
-/Uploaders/aws_cred.py
+/dist
+/taskmongr.egg-info

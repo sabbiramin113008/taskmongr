@@ -1,0 +1,17 @@
+setup.py
+taskmongr/__init__.py
+taskmongr/__main__.py
+taskmongr/application.py
+taskmongr/controller.py
+taskmongr/decoratings.py
+taskmongr/executor.py
+taskmongr/scripts.py
+taskmongr/serving.py
+taskmongr.egg-info/PKG-INFO
+taskmongr.egg-info/SOURCES.txt
+taskmongr.egg-info/dependency_links.txt
+taskmongr.egg-info/entry_points.txt
+taskmongr.egg-info/top_level.txt
+taskmongr/Models/AdminViews.py
+taskmongr/Models/PrimeModels.py
+taskmongr/Models/__init__.py

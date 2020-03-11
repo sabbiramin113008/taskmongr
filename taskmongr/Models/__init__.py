@@ -12,7 +12,8 @@ import peewee
 from peewee import *
 
 Db_Path = 'D:\\taskmongr_home\\db\\taskmongr'
-db = peewee.SqliteDatabase(f'{Db_Path}.sqlite', check_same_thread=False)
+db = peewee.SqliteDatabase(f'{Db_Path}.sqlite',
+                           check_same_thread=False)
 
 
 class BaseModel(peewee.Model):
