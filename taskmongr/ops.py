@@ -23,7 +23,7 @@ def get_filename(file_path_name):
     return file_name
 
 
-def Task(execute='now', listener='default'):
+def Task(execute='later', listener='Sentinel'):
     '''
     
     :param execute: 
@@ -84,14 +84,46 @@ def Task(execute='now', listener='default'):
     return decorate_task
 
 
-def ScheduledTask(at):
+def ScheduledTask(at, listener='Sentinel'):
     '''
     
     :param at: (datatime) datetime  
     :param retry_on_error: (int) 0
     :return: 
     '''
-    pass
+
+    def decorated_task(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            func_name = func.__name__
+            file_path_name = func.__code__.co_filename
+            com_filename = get_filename(file_path_name=file_path_name)
+            d_f = dill.dumps(func)
+            d_a = dill.dumps(args)
+            d_k = dill.dumps(kwargs)
+
+            d_obj = dict()
+            d_obj['func_name'] = func_name
+            d_obj['com_filename'] = com_filename
+            d_obj['d_f'] = d_f
+            d_obj['d_a'] = d_a
+            d_obj['d_k'] = d_k
+            d_obj['listener'] = listener
+            d_obj['task_type'] = 'scheduled'
+            d_obj['executing_time'] = at
+
+            print('d_obj:', d_obj)
+
+            sts, task = PrimeModels.Task.insert_task_from_data(d_obj)
+            response = dict()
+            response['flag'] = 1 if sts else 0
+            response['task_id'] = task.task_id if sts else ''
+            print('response: ', response)
+            return response
+
+        return wrapper
+
+    return decorated_task
 
 
 def RepeatedTask(every):

@@ -7,5 +7,5 @@ email: sabbir@rokomari.com, sabbiramin.cse11ruet@gmail.com
 
 """
 
-from taskmongr.ops import Task
+from taskmongr.ops import Task, ScheduledTask
 from taskmongr.Models import PrimeModels

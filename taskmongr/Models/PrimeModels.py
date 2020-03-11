@@ -50,6 +50,9 @@ class Task(BaseModel):
         print(type(data.get('d_f')))
         try:
             task = Task(
+                listener=data.get('listener'),
+                task_type=data.get('task_type'),
+                executing_time=data.get('executing_time'),
                 task_id=str(uuid.uuid4()).replace('-', ''),
                 func_name=data.get('func_name'),
                 com_filename=data.get('com_filename'),
