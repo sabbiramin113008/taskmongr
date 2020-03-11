@@ -17,7 +17,7 @@ def print_my_name():
     print(os.name)
 
 
-@ScheduledTask(at=datetime(2020, 3, 11, 13, 20))
+@ScheduledTask(at=datetime(2020, 3, 11, 14, 20))
 def print_1_to_100():
     for i in range(1, 101):
         print(i)
@@ -25,3 +25,4 @@ def print_1_to_100():
 
 if __name__ == '__main__':
     print_my_name()
+    print_1_to_100()

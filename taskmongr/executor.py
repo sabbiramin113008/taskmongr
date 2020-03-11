@@ -26,12 +26,14 @@ def batch_execute():
             try:
                 value = f_after(*a_after, **k_after)
                 task.execution_status = 2
+                task.executing_time = datetime.datetime.now()
                 task.u_data = datetime.datetime.now()
                 task.save()
                 print('Task ID: {}: Execution Status: {}'
                       .format(task.task_id, task.execution_status))
             except Exception as e:
                 task.execution_status = 3
+                task.executing_time = datetime.datetime.now()
                 task.u_data = datetime.datetime.now()
                 task.save()
                 print('Task ID: {}: Execution Status: {}, Error: {}'

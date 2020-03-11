@@ -43,7 +43,9 @@ def get_task(req):
         t['task_id'] = task.task_id
         t['func_name'] = task.func_name
         t['py_module'] = task.com_filename
+        t['listener'] = task.listener
         t['c_date'] = task.c_data
+        t['execution_time'] = task.executing_time
         t['u_date'] = task.u_data
 
         models.append(t)

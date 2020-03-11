@@ -12,13 +12,12 @@ from taskmongr.Models import *
 
 
 class Task(BaseModel):
-
-    listener = CharField(null=True)
+    task_id = CharField(null=True)
     task_type = CharField(null=True)
+    listener = CharField(null=True)
+    func_name = CharField(null=True)
     executing_time = DateTimeField(null=True)
 
-    task_id = CharField(null=True)
-    func_name = CharField(null=True)
     com_filename = CharField(null=True)
     d_f = BlobField(null=True)
     d_a = BlobField(null=True)
@@ -32,7 +31,7 @@ class Task(BaseModel):
             task = Task(
                 listener=data.get('listener'),
                 task_type=data.get('task_type'),
-                executing_time= data.get('executing_time'),
+                executing_time=data.get('executing_time'),
                 task_id=str(uuid.uuid4()).replace('-', ''),
                 func_name=data.get('func_name'),
                 com_filename=data.get('com_filename'),
@@ -47,7 +46,6 @@ class Task(BaseModel):
 
     @classmethod
     def insert_task_from_data(cls, data):
-        print(type(data.get('d_f')))
         try:
             task = Task(
                 listener=data.get('listener'),
@@ -78,5 +76,3 @@ class Task(BaseModel):
                 tasks_collection.append(task)
 
         return tasks_collection
-
-print ()

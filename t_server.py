@@ -2,10 +2,12 @@
 
 """
 author: S.M. Sabbir Amin
-date: 10 Mar 2020
+date: 11 Mar 2020
 email: sabbir@rokomari.com, sabbiramin.cse11ruet@gmail.com
 
 """
 
-from taskmongr.decoratings import Task, ScheduledTask
-from taskmongr.Models import PrimeModels
+if __name__ == '__main__':
+    from taskmongr.serving import run_server
+
+    run_server()

@@ -7,11 +7,17 @@ email: sabbir@rokomari.com, sabbiramin.cse11ruet@gmail.com
 
 """
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect
 
 from taskmongr import controller
 
 app = Flask(__name__)
+app.secret_key = 'somethingsecretfortheapplication'
+
+
+@app.route('/')
+def get_admin_index():
+    return redirect('/admin/')
 
 
 @app.route('/enqueue', methods=['POST'])
@@ -23,11 +29,3 @@ def enqueue():
 def get_tasks():
     return jsonify(controller.get_task(request))
 
-
-if __name__ == '__main__':
-
-    app.run(
-        host='localhost',
-        port=4000,
-        debug=True
-    )
