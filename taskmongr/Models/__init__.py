@@ -7,12 +7,23 @@ email: sabbir@rokomari.com, sabbiramin.cse11ruet@gmail.com
 
 """
 import datetime
-
+import os
 import peewee
 from peewee import *
 
 Db_Path = 'D:\\taskmongr_home\\db\\taskmongr'
-db = peewee.SqliteDatabase(f'{Db_Path}.sqlite',
+default_path = os.environ.get('USERPROFILE')
+default_base = os.environ.get('taskmongr', default=default_path)
+# make a home directory
+try:
+    os.mkdir(os.path.join(default_base, 'taskmongr_home'))
+except:
+    pass
+final_path = os.path.join(default_base, 'taskmongr_home')
+db_name = 'taskmongr.sqlite'
+joined_path_name = os.path.join(final_path, db_name)
+
+db = peewee.SqliteDatabase(joined_path_name,
                            check_same_thread=False)
 
 
