@@ -17,7 +17,7 @@ There are some motivations, which led to try this one,
 -------------------------------
 #### 1. Using Pip
 ```python
-pip install git+https://github.com/sabbiramin113008/mockr.git
+pip install git+https://github.com/sabbiramin113008/taskmongr.git
 
 ```
 ## Setting Up `taskmongr`

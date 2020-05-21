@@ -18,10 +18,12 @@ setup(
     entry_points={"console_scripts": ["taskmongr = taskmongr.__main__:main"]},
     license='GNU GPL v3 or later',
     install_requires=[
-        # 'peewee==3.5.0',
-        # 'Flask==1.0.2',
-        # 'requests==2.17.1',
-        # 'Flask_Admin==1.5.4',
+        'Flask == 1.0.2',
+        'Flask_Admin == 1.5.4',
+        'dill == 0.3.1.1',
+        'peewee == 3.5.0',
+        'schedule == 0.6.0',
+        'setuptools == 39.0.1',
 
     ],
     package_data={
