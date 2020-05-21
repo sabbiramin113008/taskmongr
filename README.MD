@@ -21,7 +21,6 @@ pip install git+https://github.com/sabbiramin113008/mockr.git
 
 ```
 ## Setting Up `taskmongr`
----------------------------
 
 #### 1. Setting Up the Database
 All the tasks are pickled and saved to a SQLite database for future actions. So after
@@ -73,8 +72,8 @@ it for yourself.
  By default the task will be executed later by the global executor in First in First Out Way. 
  But if `execute='now'` is provided, it will be executed, instantly. 
  
- ```python
- from taskmongr import Task
+```python
+from taskmongr import Task
 
 
 @Task()
@@ -82,7 +81,7 @@ def print_my_name():
     import os
     print(os.name)
 ```
-  Here `print_my_name` is annotated as `Task` that will be later executed by the executor.
+Here `print_my_name` is annotated as `Task` that will be later executed by the executor.
 
 ### Scheduled Task
 When a task is to scheduled, the `@ScheduledTask()` decorator is used. The `at` param
