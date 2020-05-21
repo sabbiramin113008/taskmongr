@@ -13,6 +13,24 @@ There are some motivations, which led to try this one,
     great libraries by mimicing them from scratch. 
 - I Love Creating things. 
 
+### Requirements
+------------------
+
+I've prepared and tested this with python version `Python 3.6.5`. `taskmongr` uses a lot of the great tools added below. I have plans for replacing
+them with more built-in alternatives. But as for now, I plan to stick to it, until I prepared one.
+
+- `Flask`==1.0.2
+- `Flask_Admin`==1.5.4
+- `dill`==0.3.1.1
+- `peewee`==3.5.0
+- `schedule`==0.6.0
+
+All these great libraries made it possible to build this whole package.  
+
+NB. If you are not planning to use the Web Dashboard, 
+you can skip  `Flask` and `Flask_Admin`.
+
+
 ### How To Install `taskmongr`
 -------------------------------
 #### 1. Using Pip
