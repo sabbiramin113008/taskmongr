@@ -41,6 +41,8 @@ sure you open up the terminal and run the
 taskmongr listen
 ```
 
+NB. In future I will adding different Listener support. Currently, and by default it has only one named `Sentinel`.
+
 #### 3. Starting the Server.
 You can see the progress of the tasks directly from the server. But to monitor it, you need to
 start it. Open up the terminal and hit
@@ -51,12 +53,7 @@ It will start the Simple Light Weight Web server. Navigate to `http://localhost:
 it for yourself. 
 
 
-
-
-
-
-
-
+![taskmongr Web Dash Board](./img/taskmongr_admin.png)
 
 ### Components
 ------------------------
