@@ -84,7 +84,7 @@ def print_my_name():
 Here `print_my_name` is annotated as `Task` that will be later executed by the executor.
 After invoking the task, a response will be return as
 ```json
-{'flag': 1, 'task_id': '676212f3ebf24716a342a32451a12da3'}
+{"flag": 1, "task_id": "577311c18ecc41018f02b2f024678fa3"}
 ```
 
 ### Scheduled Task
@@ -103,7 +103,7 @@ def print_1_to_100():
 `print_1_to_100` method is scheduled to execute at 6:41 AM of 28th October, 2020. 
 Like the previous one, After invoking the task, a response will be return as
 ```json
-{'flag': 1, 'task_id': '577311c18ecc41018f02b2f024678fa3'}
+{"flag": 1, "task_id": "676212f3ebf24716a342a32451a12da3"}
 ```
 It will denote if the data is stored or not. 
 
