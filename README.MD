@@ -7,11 +7,11 @@ I know there are already good to awesome libraries to support do-able to product
 To name a few of them `RQ`, `Celery` etc are the most notable for their huge eco systems and support.
 
 There are some motivations, which led to try this one,
-1. I want to write a simple `task manager` from scratch. 
-2. It should be simple to run on Windows Machine ( Without WSL Support).
-3. I have a crazy fascination understanding the inner maechanics of these 
-great libraries by mimicing them from scratch. 
-4. I Love Creating things. 
+- I want to write a simple `task manager` from scratch. 
+- It should be simple to run on Windows Machine ( Without WSL Support).
+- I have a crazy fascination understanding the inner maechanics of these 
+    great libraries by mimicing them from scratch. 
+- I Love Creating things. 
 
 ### How To Install `taskmongr`
 -------------------------------
